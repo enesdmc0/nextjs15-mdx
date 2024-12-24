@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { highlight } from "sugar-high";
 import { Link } from "next-view-transitions";
+import { highlight } from "sugar-high";
 import { ComponentPropsWithoutRef } from "react";
+import { MDXComponents } from "mdx/types";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -20,12 +21,12 @@ type HrProps = ComponentPropsWithoutRef<"hr">;
 type DeleteProps = ComponentPropsWithoutRef<"del">;
 type InlineCodeProps = ComponentPropsWithoutRef<"code">;
 
-const components = {
+const components: MDXComponents = {
   h1: (props: HeadingProps) => (
     <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <h2 className="text-red-800 font-medium mt-8 mb-3" {...props} />
   ),
   h3: (props: HeadingProps) => (
     <h3 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
